@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    font-family: Lato, sans-serif;
+    display: block;
+}
+
+/* FEATURES SECTION */
+.fa-solid {
+    color: #f37e12;
+}
+
+/* HOW IT WORKS SECTION */
+#video {
+    height: 300px;
+    width: 200px;
+}
+
+/* PRICING SECTION */
+#pricing {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.product h2 {
+    text-align: center;
+}
+
+.product-desc {
+    list-style: none;
+    line-height: 2rem;
+}
+
+.btn {
+    position: relative;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    #nav-bar a {
+        scroll-behavior: smooth;
+    }
+}
