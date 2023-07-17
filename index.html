@@ -9,7 +9,9 @@
     </head>
     <body>
         <header id="header">
-            <img id="header-img" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png" alt="Company logo" style="width: 200px;" />
+            <div class="logo">
+                <img id="header-img" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png" alt="Company logo" />
+            </div>
             <nav id="nav-bar">
                 <ul>
                     <li><a class="nav-link" href="#features">Features</a></li>
@@ -18,14 +20,18 @@
                 </ul>
             </nav>
         </header>
-        <div id="get-started">
-
-        </div>
+        <section id="get-started">
+            <h2>Handcrafted, home-made masterpieces</h2>
+            <form action="" method="post" id="form">
+                <input name="email" id="email" type="email" placeholder="Enter your email address" pattern="email" size="40" required/>
+                <button class="btn submit" type="submit">Get Started</button>
+            </form>
+        </section>
         <main id="product-details">
             <section id="features">
                 <div class="feature-grid">
                     <div class="feature-icon">
-                        <i class="fa-solid fa-fire-flame-curved"></i>
+                        <i class="fa-solid fa-3x fa-fire-flame-curved"></i>
                     </div>
                     <div class="feature-desc">
                         <h2>Premium Materials</h2>
@@ -34,7 +40,7 @@
                 </div>
                 <div class="feature-grid">
                     <div class="feature-icon">
-                        <i class="fa-solid fa-truck-fast"></i>
+                        <i class="fa-solid fa-3x fa-truck-fast"></i>
                     </div>
                     <div class="feature-desc">
                         <h2>Fast Shipping</h2>
@@ -43,7 +49,7 @@
                 </div>
                 <div class="feature-grid">
                     <div class="feature-icon">
-                        <i class="fa-solid fa-clipboard"></i>
+                        <i class="fa-solid fa-3x fa-clipboard"></i>
                     </div>
                     <div class="feature-desc">
                         <h2>Quality Assurance</h2>
@@ -52,7 +58,7 @@
                 </div>
             </section>
             <section id="how-it-works">
-                <iframe id="video" src="https://youtu.be/y8Yv4pnO7qc" alt="Video of band members using Original Trombones products"
+                <iframe id="video" src="https://youtube/y8Yv4pnO7qc" alt="Video of band members using Original Trombones products"
                     allowfullscreen></iframe>
             </section>
             <section id="pricing">
@@ -90,14 +96,12 @@
         </main>
     </body>
     <footer>
-        <div id="footer">
-            <ul>
-                <li>Privacy</li>
-                <li>Terms</li>
-                <li>Contact</li>
-            </ul>
-            <p>Copyright 2023, Original Trombones</p>
-        </div>
+        <ul>
+            <li>Privacy</li>
+            <li>Terms</li>
+            <li>Contact</li>
+        </ul>
+        <p>Copyright 2023, Original Trombones</p>
     </footer>
         </div>
     </footer>

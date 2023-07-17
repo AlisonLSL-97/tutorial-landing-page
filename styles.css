@@ -10,15 +10,119 @@ body {
     display: block;
 }
 
+/* NAVIGATION BAR */
+#header {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    top: 0;
+    min-height: 80px;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #eee;
+}
+
+.logo {
+    width: 60vw;
+}
+
+#header-img {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+#nav-bar {
+    font-weight: 400;
+}
+
+#nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 35vw;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+}
+
+/* GET STARTED SECTION */
+#get-started {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+    margin-top: 70px;
+}
+
+#email {
+    margin-top: 0.75rem;
+    padding: 4px;
+}
+
+.btn.submit {
+    display: block;
+    margin: 0.75rem auto;
+    font-weight: 600;
+}
+
 /* FEATURES SECTION */
-.fa-solid {
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#features {
+    margin-top: 10px;
+}
+
+.feature-grid {
+    display: flex;
+}
+
+.feature-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 120px;
     color: #f37e12;
+}
+
+.fa-solid {
+    font-size: 3em;
+}
+
+.feature-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+    height: 120px;
+}
+
+.feature-desc > p {
+    margin-top: 5px;
+    line-height: 1.5;
 }
 
 /* HOW IT WORKS SECTION */
 #video {
     height: 300px;
     width: 200px;
+    margin-top: 20px;
 }
 
 /* PRICING SECTION */
@@ -38,10 +142,41 @@ body {
 
 .btn {
     position: relative;
+    padding: 10px;
+    background-color: #f3d912;
+    color: black;
+    border: none;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* FOOTER */
+footer {
+    background-color: rgb(203, 211, 218);
+    margin-top: 50px;
+    padding: 20px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer ul li {
+    text-align: center;
+    padding: 0 10px;
+}
+
+footer p {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: rgb(69, 69, 69);
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    #nav-bar a {
+    * {
         scroll-behavior: smooth;
     }
 }
