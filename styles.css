@@ -71,7 +71,7 @@ ul {
     padding: 4px;
 }
 
-.btn.submit {
+#submit {
     display: block;
     margin: 0.75rem auto;
     font-weight: 600;
