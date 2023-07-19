@@ -10,6 +10,10 @@ body {
     display: block;
 }
 
+:root {
+    --navigation-menu-height: 80px;
+}
+
 .btn {
     padding: 10px;
     background-color: #f3d912;
@@ -27,7 +31,7 @@ body {
     display: flex;
     justify-content: space-around;
     top: 0;
-    min-height: 80px;
+    min-height: var(--navigation-menu-height);
     align-items: center;
     padding: 0 20px;
     background-color: #eee;
@@ -162,7 +166,7 @@ main {
     border: 1px solid rgb(54, 54, 54);
     border-radius: 10px;
     width: calc(100% / 3);
-    max-width: 225px;
+    max-width: 300px;
     margin: 10px;
 }
 
@@ -181,8 +185,8 @@ main {
 
 .product > .product-desc {
     list-style: none;
-    line-height: 2rem;
-    margin: 10px 0;
+    line-height: 2.5rem;
+    margin: 10px 15px;
 }
 
 .product > button {
@@ -217,5 +221,6 @@ footer p {
 @media (prefers-reduced-motion: no-preference) {
     * {
         scroll-behavior: smooth;
+        scroll-padding-top: var(--navigation-menu-height);
     }
 }
