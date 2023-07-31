@@ -58,11 +58,11 @@ ul {
     font-weight: 400;
 }
 
-#nav-bar ul {
+#nav-bar > ul {
+    width: 35vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 35vw;
 }
 
 .nav-link {
@@ -99,10 +99,6 @@ main {
     width: 100%;
 }
 
-#features {
-    margin-top: 10px;
-}
-
 .feature-grid {
     display: flex;
 }
@@ -125,7 +121,7 @@ main {
     flex-direction: column;
     justify-content: center;
     width: 80vw;
-    height: 120px;
+    height: 20vh;
 }
 
 .feature-desc > p {
@@ -152,9 +148,10 @@ main {
 /* PRICING SECTION */
 #pricing {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 10px;
     margin-top: 50px;
+    gap: 1.5em;
 }
 
 .product {
@@ -167,7 +164,7 @@ main {
     border-radius: 10px;
     width: calc(100% / 3);
     max-width: 300px;
-    margin: 10px;
+    min-width: 200px;
 }
 
 .product > .product-name {
@@ -183,14 +180,16 @@ main {
     margin-top: 10px;
 }
 
-.product > .product-desc {
+.product > ol {
     list-style: none;
-    line-height: 2.5rem;
-    margin: 10px 15px;
+    line-height: 2em;
+    margin: 10px 0;
+    padding: 0 10px;
+    width: 80%;
 }
 
 .product > button {
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
 
 /* FOOTER */
@@ -222,5 +221,78 @@ footer p {
     * {
         scroll-behavior: smooth;
         scroll-padding-top: var(--navigation-menu-height);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #pricing {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #nav-bar > ul {
+        flex-direction: column;
+        text-align: right;
+        gap: 5px;
+        margin: 15px 0;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    header {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        margin-top: 15px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #nav-bar > ul {
+        text-align: center;
+    }
+
+    #get-started {
+        margin-top: 8em;
+    }
+
+    .feature-icon {
+        display: none;
+    }
+
+    .feature-grid {
+        justify-content: center;
+    }
+
+    .feature-desc {
+        text-align: center;
+        height: 25vh;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    h2 {
+        font-size: 1.2em;
+    }
+    
+    footer {
+        font-size: 0.9em;
     }
 }
