@@ -1,5 +1,6 @@
 :root {
-    --navigation-menu-height: 80px;
+    --scroll-padding-top-fullscreen: 70px;
+    --scroll-padding-top-dif: 30px;
 }
 
 * {
@@ -15,7 +16,7 @@ body {
 }
 
 html {
-    scroll-padding-top: var(--navigation-menu-height);
+    scroll-padding-top: var(--scroll-padding-top-fullscreen);
 }
 
 .btn {
@@ -35,7 +36,7 @@ html {
     display: flex;
     justify-content: space-around;
     top: 0;
-    min-height: var(--navigation-menu-height);
+    min-height: 5em;
     align-items: center;
     padding: 0 20px;
     background-color: #eee;
@@ -227,7 +228,6 @@ footer p {
 @media (prefers-reduced-motion: no-preference) {
     * {
         scroll-behavior: smooth;
-        scroll-padding-top: var(--navigation-menu-height);
     }
 }
 
@@ -243,6 +243,10 @@ footer p {
 }
 
 @media only screen and (max-width: 650px) {
+    html {
+        scroll-padding-top: calc(var(--scroll-padding-top-dif) + var(--scroll-padding-top-fullscreen));
+    }
+
     #nav-bar > ul {
         flex-direction: column;
         text-align: right;
@@ -255,15 +259,16 @@ footer p {
     header {
         width: 100%;
     }
+
 }
 
 @media only screen and (max-width: 600px) {
-    #header {
-        flex-wrap: wrap;
+    html {
+        scroll-padding-top: calc(2.2 * var(--scroll-padding-top-dif) + var(--scroll-padding-top-fullscreen));
     }
 
-    html {
-        scroll-padding-top: 135px;
+    #header {
+        flex-wrap: wrap;
     }
 
     .logo {
